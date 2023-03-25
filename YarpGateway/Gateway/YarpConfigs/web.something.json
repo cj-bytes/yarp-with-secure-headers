@@ -1,0 +1,24 @@
+{
+  "WebReverseProxy": {
+    "Routes": {
+      "web": {
+        "ClusterId": "web",
+        "MetaData": {
+          "ResponseHeaderTransformKey": "SecureWebResponseHeaders"
+        },
+        "Match": {
+          "Path": "{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "web": {
+        "Destinations": {
+          "cluster1": {
+            "Address": "https://example.com/"
+          }
+        }
+      }
+    }
+  }
+}

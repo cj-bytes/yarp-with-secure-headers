@@ -1,0 +1,21 @@
+{
+  "api": {
+    "Routes": {
+      "api": { 
+        "ClusterId": "api",
+        "Match": {
+          "Path": "posts"
+        }
+      }
+    },
+    "Clusters": {
+      "api": {
+        "Destinations": {
+          "cluster1": {
+            "Address": "https://jsonplaceholder.typicode.com/"
+          }
+        }
+      }
+    }
+  }
+}
